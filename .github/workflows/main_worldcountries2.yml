@@ -27,8 +27,8 @@ jobs:
       - name: Build with Maven
         env:
               PROD_DATABASE_URL: ${{secrets.PROD_DATABASE_URL}}
-              PROD_DATABASE_PASSWORD: ${{secrets.PROD_PASSWORD}}
-              PROD_DATABASE_USERNAME: ${{secrets.PROD_USERNAME}}
+              PROD_DATABASE_PASSWORD: ${{secrets.PROD_DATABASE_PASSWORD}}
+              PROD_DATABASE_USERNAME: ${{secrets.PROD_DATABASE_USERNAME}}
         run: mvn clean install
 
       - name: Upload artifact for deployment job
